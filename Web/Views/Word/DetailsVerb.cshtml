@@ -1,0 +1,72 @@
+﻿@model LetsLearnCzech.Web.Models.VerbModel
+
+@{
+    ViewBag.Title = "Verb details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Verb details</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ForeignWord)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ForeignWord)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocalWord)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LocalWord)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aspect)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Aspect)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Conjugation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Conjugation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsProcessed)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IsProcessed)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Person)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Person)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tense)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Tense)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateModified)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateModified)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

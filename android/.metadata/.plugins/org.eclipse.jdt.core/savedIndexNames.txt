@@ -1,0 +1,4 @@
+INDEX VERSION 1.126+C:\dev\LetsLearnCzech\android\.metadata\.plugins\org.eclipse.jdt.core
+3152894389.index
+3230004191.index
+1834548837.index

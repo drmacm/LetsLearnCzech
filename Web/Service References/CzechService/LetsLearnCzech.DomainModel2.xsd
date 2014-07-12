@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/LetsLearnCzech.DomainModel" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LetsLearnCzech.DomainModel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfWord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Word" nillable="true" type="tns:Word" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWord" nillable="true" type="tns:ArrayOfWord" />
+  <xs:complexType name="Word">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Aspect" nillable="true" type="tns:Aspect" />
+      <xs:element minOccurs="0" name="Case" nillable="true" type="tns:Case" />
+      <xs:element minOccurs="0" name="Conjugation" nillable="true" type="tns:Conjugation" />
+      <xs:element minOccurs="0" name="Creator" nillable="true" type="tns:User" />
+      <xs:element minOccurs="0" name="DateModified" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ForeignGender" nillable="true" type="tns:Gender" />
+      <xs:element minOccurs="0" name="ForeignWord" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="IsProcessed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LocalGender" nillable="true" type="tns:Gender" />
+      <xs:element minOccurs="0" name="LocalWord" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Person" nillable="true" type="tns:Person" />
+      <xs:element minOccurs="0" name="Tense" nillable="true" type="tns:Tense" />
+      <xs:element minOccurs="0" name="WordType" type="tns:WordType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Word" nillable="true" type="tns:Word" />
+  <xs:simpleType name="Aspect">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Perfective" />
+      <xs:enumeration value="Imperfective" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Aspect" nillable="true" type="tns:Aspect" />
+  <xs:simpleType name="Case">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Nominative" />
+      <xs:enumeration value="Genitive" />
+      <xs:enumeration value="Dative" />
+      <xs:enumeration value="Accusative" />
+      <xs:enumeration value="Vocative" />
+      <xs:enumeration value="Locative" />
+      <xs:enumeration value="Instrumental" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Case" nillable="true" type="tns:Case" />
+  <xs:simpleType name="Conjugation">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="AT" />
+      <xs:enumeration value="OVAT" />
+      <xs:enumeration value="IT" />
+      <xs:enumeration value="Special" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Conjugation" nillable="true" type="tns:Conjugation" />
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:simpleType name="Gender">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="M" />
+      <xs:enumeration value="F" />
+      <xs:enumeration value="N" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Gender" nillable="true" type="tns:Gender" />
+  <xs:simpleType name="Person">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Infinitive" />
+      <xs:enumeration value="FirstPersonSingular" />
+      <xs:enumeration value="SecondPersonSingular" />
+      <xs:enumeration value="ThirdPersonSingular" />
+      <xs:enumeration value="FirstPersonPlural" />
+      <xs:enumeration value="SecondPersonPlural" />
+      <xs:enumeration value="ThirdPersonPlural" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Person" nillable="true" type="tns:Person" />
+  <xs:simpleType name="Tense">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Infinitive" />
+      <xs:enumeration value="Present" />
+      <xs:enumeration value="Past" />
+      <xs:enumeration value="Future" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Tense" nillable="true" type="tns:Tense" />
+  <xs:simpleType name="WordType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Noun">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Verb">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WordType" nillable="true" type="tns:WordType" />
+</xs:schema>
