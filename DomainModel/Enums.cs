@@ -14,58 +14,58 @@ namespace LetsLearnCzech.DomainModel
 
     public enum Gender
     {
-        Unknown = 0,
-        M = 1,
-        F = 2,
-        N = 3
+        Unknown = 1,
+        M = 2,
+        F = 3,
+        N = 4
     }
 
     public enum Case
     {
-        Unknown = 0,
-        Nominative = 1,
-        Genitive = 2,
-        Dative = 3,
-        Accusative = 4,
-        Vocative = 5,
-        Locative = 6,
-        Instrumental = 7
+        Unknown = 1,
+        Nominative = 2,
+        Genitive = 3,
+        Dative = 4,
+        Accusative = 5,
+        Vocative = 6,
+        Locative = 7,
+        Instrumental = 8
     }
 
     public enum Conjugation
     {
-        Unknown = 0,
-        AT = 1,
-        OVAT = 2,
-        IT = 3,
-        Special = 4
+        Unknown = 1,
+        AT = 2,
+        OVAT = 3,
+        IT = 4,
+        Special = 5
     }
 
     public enum Aspect
     {
-        Unknown = 0,
-        Perfective = 1,
-        Imperfective = 2
+        Unknown = 1,
+        Perfective = 2,
+        Imperfective = 3
     }
      
     public enum Person
     {
-        Unknown = 0,
-        Infinitive = 1,
-        FirstPersonSingular = 2,
-        SecondPersonSingular = 3,
-        ThirdPersonSingular = 4,
-        FirstPersonPlural = 5,
-        SecondPersonPlural = 6,
-        ThirdPersonPlural = 7
+        Unknown = 1,
+        Infinitive = 2,
+        FirstPersonSingular = 3,
+        SecondPersonSingular = 4,
+        ThirdPersonSingular = 5,
+        FirstPersonPlural = 6,
+        SecondPersonPlural = 7,
+        ThirdPersonPlural = 8
     }
 
     public enum Tense
     {
-        Unknown = 0,
-        Infinitive = 1,
-        Present = 2,
-        Past = 3,
-        Future = 4,
+        Unknown = 1,
+        Infinitive = 2,
+        Present = 3,
+        Past = 4,
+        Future = 5,
     }
 }

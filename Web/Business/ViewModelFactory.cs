@@ -24,11 +24,15 @@ namespace LetsLearnCzech.Web.Business
                         LocalWord = word.LocalWord,
                         IsProcessed = word.IsProcessed,
                         DateModified = word.DateModified.Value,
-                        
-                        Case = word.Case.Value,
-                        ForeignGender = word.ForeignGender.Value,
-                        LocalGender = word.LocalGender.Value,
                     };
+
+                    if (word.Case.HasValue)
+                            noun.Case = word.Case.Value;
+                    if (word.ForeignGender.HasValue)
+                            noun.ForeignGender = word.ForeignGender.Value;
+                    if (word.LocalGender.HasValue)
+                            noun.LocalGender = word.LocalGender.Value;
+
                     return noun;
                 case WordType.Verb:
                     VerbModel verb = new VerbModel()
@@ -38,12 +42,16 @@ namespace LetsLearnCzech.Web.Business
                         LocalWord = word.LocalWord,
                         IsProcessed = word.IsProcessed,
                         DateModified = word.DateModified.Value,
-
-                        Aspect = word.Aspect.Value,
-                        Conjugation = word.Conjugation.Value,
-                        Person = word.Person.Value,
-                        Tense = word.Tense.Value,
                     };
+                    if (word.Aspect.HasValue)
+                        verb.Aspect = word.Aspect.Value;
+                    if (word.Conjugation.HasValue)
+                        verb.Conjugation = word.Conjugation.Value;
+                    if (word.Person.HasValue)
+                        verb.Person = word.Person.Value;
+                    if (word.Tense.HasValue)
+                        verb.Tense = word.Tense.Value;
+
                     return verb;
                 default:
                     return null;
@@ -57,18 +65,18 @@ namespace LetsLearnCzech.Web.Business
                 case WordType.Noun:
                     NounModel noun = new NounModel()
                     {
-                        LocalGender = Gender.M,
-                        ForeignGender = Gender.M,
-                        Case = Case.Nominative
+                        LocalGender = Gender.Unknown,
+                        ForeignGender = Gender.Unknown,
+                        Case = Case.Unknown
                     };
                     return noun;
                 case WordType.Verb:
                     VerbModel verb = new VerbModel()
                     {
-                        Aspect = Aspect.Imperfective,
-                        Conjugation = Conjugation.AT,
-                        Person = Person.Infinitive,
-                        Tense = Tense.Infinitive
+                        //Aspect = Aspect.Unknown,
+                        //Conjugation = Conjugation.Unknown,
+                        //Person = Person.Unknown,
+                        //Tense = Tense.Unknown
                     };
                     return verb;
                 default:

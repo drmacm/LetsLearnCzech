@@ -332,13 +332,13 @@ namespace LetsLearnCzech.Web.CzechService {
     public enum Aspect : int {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Unknown = 0,
+        Unknown = 1,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Perfective = 1,
+        Perfective = 2,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Imperfective = 2,
+        Imperfective = 3,
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
@@ -346,28 +346,28 @@ namespace LetsLearnCzech.Web.CzechService {
     public enum Case : int {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Unknown = 0,
+        Unknown = 1,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Nominative = 1,
+        Nominative = 2,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Genitive = 2,
+        Genitive = 3,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Dative = 3,
+        Dative = 4,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Accusative = 4,
+        Accusative = 5,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Vocative = 5,
+        Vocative = 6,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Locative = 6,
+        Locative = 7,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Instrumental = 7,
+        Instrumental = 8,
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
@@ -375,19 +375,19 @@ namespace LetsLearnCzech.Web.CzechService {
     public enum Conjugation : int {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Unknown = 0,
+        Unknown = 1,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        AT = 1,
+        AT = 2,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        OVAT = 2,
+        OVAT = 3,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        IT = 3,
+        IT = 4,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Special = 4,
+        Special = 5,
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
@@ -395,16 +395,16 @@ namespace LetsLearnCzech.Web.CzechService {
     public enum Gender : int {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Unknown = 0,
+        Unknown = 1,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        M = 1,
+        M = 2,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        F = 2,
+        F = 3,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        N = 3,
+        N = 4,
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
@@ -412,28 +412,28 @@ namespace LetsLearnCzech.Web.CzechService {
     public enum Person : int {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Unknown = 0,
+        Unknown = 1,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Infinitive = 1,
+        Infinitive = 2,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        FirstPersonSingular = 2,
+        FirstPersonSingular = 3,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        SecondPersonSingular = 3,
+        SecondPersonSingular = 4,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        ThirdPersonSingular = 4,
+        ThirdPersonSingular = 5,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        FirstPersonPlural = 5,
+        FirstPersonPlural = 6,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        SecondPersonPlural = 6,
+        SecondPersonPlural = 7,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        ThirdPersonPlural = 7,
+        ThirdPersonPlural = 8,
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
@@ -441,19 +441,19 @@ namespace LetsLearnCzech.Web.CzechService {
     public enum Tense : int {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Unknown = 0,
+        Unknown = 1,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Infinitive = 1,
+        Infinitive = 2,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Present = 2,
+        Present = 3,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Past = 3,
+        Past = 4,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Future = 4,
+        Future = 5,
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]

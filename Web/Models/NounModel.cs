@@ -16,12 +16,15 @@ namespace LetsLearnCzech.Web.Models
         }
 
         [DisplayName("Foreign gender")]
+        [Range(1, int.MaxValue, ErrorMessage = "Select a correct foreign gender")]
         public Gender ForeignGender { get; set; }
         
         [DisplayName("Local gender")]
+        [Range(1, int.MaxValue, ErrorMessage = "Select a correct local gender")]
         public Gender LocalGender { get; set; }
         
         [DisplayName("Case")]
+        [Range(1, int.MaxValue, ErrorMessage = "Select a correct case")]
         public Case Case { get; set; }
     }
 }
