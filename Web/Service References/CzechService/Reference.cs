@@ -483,11 +483,11 @@ namespace LetsLearnCzech.Web.CzechService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICzechService/GetAllWordsOfType", ReplyAction="http://tempuri.org/ICzechService/GetAllWordsOfTypeResponse")]
         System.Threading.Tasks.Task<LetsLearnCzech.Web.CzechService.Word[]> GetAllWordsOfTypeAsync(LetsLearnCzech.Web.CzechService.WordType wordType);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICzechService/GetUnprocessedWordsOfType", ReplyAction="http://tempuri.org/ICzechService/GetUnprocessedWordsOfTypeResponse")]
-        LetsLearnCzech.Web.CzechService.Word[] GetUnprocessedWordsOfType(LetsLearnCzech.Web.CzechService.WordType wordType);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICzechService/GetUnprocessedWords", ReplyAction="http://tempuri.org/ICzechService/GetUnprocessedWordsResponse")]
+        LetsLearnCzech.Web.CzechService.Word[] GetUnprocessedWords();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICzechService/GetUnprocessedWordsOfType", ReplyAction="http://tempuri.org/ICzechService/GetUnprocessedWordsOfTypeResponse")]
-        System.Threading.Tasks.Task<LetsLearnCzech.Web.CzechService.Word[]> GetUnprocessedWordsOfTypeAsync(LetsLearnCzech.Web.CzechService.WordType wordType);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICzechService/GetUnprocessedWords", ReplyAction="http://tempuri.org/ICzechService/GetUnprocessedWordsResponse")]
+        System.Threading.Tasks.Task<LetsLearnCzech.Web.CzechService.Word[]> GetUnprocessedWordsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICzechService/GetSingleWord", ReplyAction="http://tempuri.org/ICzechService/GetSingleWordResponse")]
         LetsLearnCzech.Web.CzechService.Word GetSingleWord(System.Nullable<int> id);
@@ -557,12 +557,12 @@ namespace LetsLearnCzech.Web.CzechService {
             return base.Channel.GetAllWordsOfTypeAsync(wordType);
         }
         
-        public LetsLearnCzech.Web.CzechService.Word[] GetUnprocessedWordsOfType(LetsLearnCzech.Web.CzechService.WordType wordType) {
-            return base.Channel.GetUnprocessedWordsOfType(wordType);
+        public LetsLearnCzech.Web.CzechService.Word[] GetUnprocessedWords() {
+            return base.Channel.GetUnprocessedWords();
         }
         
-        public System.Threading.Tasks.Task<LetsLearnCzech.Web.CzechService.Word[]> GetUnprocessedWordsOfTypeAsync(LetsLearnCzech.Web.CzechService.WordType wordType) {
-            return base.Channel.GetUnprocessedWordsOfTypeAsync(wordType);
+        public System.Threading.Tasks.Task<LetsLearnCzech.Web.CzechService.Word[]> GetUnprocessedWordsAsync() {
+            return base.Channel.GetUnprocessedWordsAsync();
         }
         
         public LetsLearnCzech.Web.CzechService.Word GetSingleWord(System.Nullable<int> id) {

@@ -7,9 +7,8 @@ using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
 
-namespace LetsLearnCzech.Service
+namespace LetsLearnCzech.IISService
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IService1" in both code and config file together.
     [ServiceContract]
     public interface ICzechService
     {
@@ -22,7 +21,7 @@ namespace LetsLearnCzech.Service
         IList<Word> GetAllWordsOfType(WordType wordType);
 
         [OperationContract]
-        IList<Word> GetUnprocessedWordsOfType(WordType wordType);
+        IList<Word> GetUnprocessedWords();
 
         [OperationContract]
         Word GetSingleWord(int? id);

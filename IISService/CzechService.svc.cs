@@ -5,9 +5,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
+using System.ServiceModel.Web;
 using System.Text;
 
-namespace LetsLearnCzech.Service
+namespace LetsLearnCzech.IISService
 {
     public class CzechService : ICzechService
     {
@@ -30,9 +31,9 @@ namespace LetsLearnCzech.Service
             return wordBll.GetAllWordsOfType(wordType);
         }
 
-        public IList<Word> GetUnprocessedWordsOfType(WordType wordType)
+        public IList<Word> GetUnprocessedWords()
         {
-            return wordBll.GetUnprocessedWordsOfType(wordType);
+            return wordBll.GetUnprocessedWords();
         }
 
         public Word GetSingleWord(int? id)
@@ -52,7 +53,7 @@ namespace LetsLearnCzech.Service
 
         public void DeleteWord(int? id)
         {
-            wordBll.DeleteWord(id);  
+            wordBll.DeleteWord(id);
         }
     }
 }

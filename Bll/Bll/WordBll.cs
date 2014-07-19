@@ -26,11 +26,11 @@ namespace LetsLearnCzech.Bll
             }
         }
 
-        public IList<Word> GetUnprocessedWordsOfType(WordType wordType)
+        public IList<Word> GetUnprocessedWords()
         {
             using (var bll = new BllContext())
             {
-                return bll.Words.Where(w => w.WordType == wordType && w.IsProcessed == false).ToList();
+                return bll.Words.Where(w => w.IsProcessed == false).ToList();
             }
         }
 

@@ -123,21 +123,16 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <None Include="Service References\CzechService\configuration91.svcinfo" />
-    <None Include="Service References\CzechService\configuration.svcinfo" />
+    <Content Include="Service References\CzechService\CzechService.disco" />
+    <Content Include="Service References\CzechService\configuration91.svcinfo" />
+    <Content Include="Service References\CzechService\configuration.svcinfo" />
     <Content Include="Service References\CzechService\LetsLearnCzech.Web.CzechService.Word.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Service References\CzechService\LetsLearnCzech.DomainModel.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CzechService\LetsLearnCzech.DomainModel2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CzechService\Reference.svcmap">
+    <Content Include="Service References\CzechService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
+    </Content>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -163,22 +158,8 @@
     </Content>
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <None Include="Service References\CzechService\service.wsdl" />
-    <None Include="Service References\CzechService\service.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CzechService\service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <None Include="Service References\CzechService\service2.wsdl" />
-    <None Include="Service References\CzechService\service3.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CzechService\service4.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <Content Include="Views\Word\Delete.cshtml" />
     <Content Include="Views\Word\DetailsVerb.cshtml" />
     <Content Include="Views\Word\EditNoun.cshtml" />
@@ -187,6 +168,16 @@
     <Content Include="Views\Word\CreateVerb.cshtml" />
     <Content Include="Views\Word\DetailsNoun.cshtml" />
     <Content Include="Views\Word\EditVerb.cshtml" />
+    <Content Include="Service References\CzechService\CzechService.wsdl" />
+    <None Include="Service References\CzechService\CzechService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CzechService\CzechService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CzechService\CzechService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CzechService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:9067/CzechService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:9067/CzechService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:9067/CzechService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/LetsLearnCzech.DomainModel" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICzechService_GetAllWords_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWords" />
+  </wsdl:message>
+  <wsdl:message name="ICzechService_GetAllWords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICzechService_GetAllWordsOfType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWordsOfType" />
+  </wsdl:message>
+  <wsdl:message name="ICzechService_GetAllWordsOfType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWordsOfTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICzechService_GetUnprocessedWords_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnprocessedWords" />
+  </wsdl:message>
+  <wsdl:message name="ICzechService_GetUnprocessedWords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnprocessedWordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICzechService_GetSingleWord_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleWord" />
+  </wsdl:message>
+  <wsdl:message name="ICzechService_GetSingleWord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleWordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICzechService_CreateWord_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateWord" />
+  </wsdl:message>
+  <wsdl:message name="ICzechService_CreateWord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateWordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICzechService_UpdateWord_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWord" />
+  </wsdl:message>
+  <wsdl:message name="ICzechService_UpdateWord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICzechService_DeleteWord_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteWord" />
+  </wsdl:message>
+  <wsdl:message name="ICzechService_DeleteWord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteWordResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICzechService">
+    <wsdl:operation name="GetAllWords">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICzechService/GetAllWords" message="tns:ICzechService_GetAllWords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICzechService/GetAllWordsResponse" message="tns:ICzechService_GetAllWords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllWordsOfType">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICzechService/GetAllWordsOfType" message="tns:ICzechService_GetAllWordsOfType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICzechService/GetAllWordsOfTypeResponse" message="tns:ICzechService_GetAllWordsOfType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnprocessedWords">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICzechService/GetUnprocessedWords" message="tns:ICzechService_GetUnprocessedWords_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICzechService/GetUnprocessedWordsResponse" message="tns:ICzechService_GetUnprocessedWords_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleWord">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICzechService/GetSingleWord" message="tns:ICzechService_GetSingleWord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICzechService/GetSingleWordResponse" message="tns:ICzechService_GetSingleWord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateWord">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICzechService/CreateWord" message="tns:ICzechService_CreateWord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICzechService/CreateWordResponse" message="tns:ICzechService_CreateWord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWord">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICzechService/UpdateWord" message="tns:ICzechService_UpdateWord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICzechService/UpdateWordResponse" message="tns:ICzechService_UpdateWord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWord">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICzechService/DeleteWord" message="tns:ICzechService_DeleteWord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICzechService/DeleteWordResponse" message="tns:ICzechService_DeleteWord_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICzechService" type="tns:ICzechService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllWords">
+      <soap:operation soapAction="http://tempuri.org/ICzechService/GetAllWords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllWordsOfType">
+      <soap:operation soapAction="http://tempuri.org/ICzechService/GetAllWordsOfType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnprocessedWords">
+      <soap:operation soapAction="http://tempuri.org/ICzechService/GetUnprocessedWords" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleWord">
+      <soap:operation soapAction="http://tempuri.org/ICzechService/GetSingleWord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateWord">
+      <soap:operation soapAction="http://tempuri.org/ICzechService/CreateWord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWord">
+      <soap:operation soapAction="http://tempuri.org/ICzechService/UpdateWord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWord">
+      <soap:operation soapAction="http://tempuri.org/ICzechService/DeleteWord" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CzechService">
+    <wsdl:port name="BasicHttpBinding_ICzechService" binding="tns:BasicHttpBinding_ICzechService">
+      <soap:address location="http://localhost:9067/CzechService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
