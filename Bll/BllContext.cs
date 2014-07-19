@@ -16,6 +16,11 @@ namespace LetsLearnCzech.Bll
             var ensureDLLIsCopied = System.Data.Entity.SqlServer.SqlProviderServices.Instance;
         }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Ignore<SimpleWord>();
+        }
+
         public DbSet<User> Users { get; set; }
         public DbSet<Word> Words { get; set; }
     }

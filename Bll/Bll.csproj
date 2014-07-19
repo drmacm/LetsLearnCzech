@@ -67,6 +67,14 @@
     <Compile Include="Migrations\201407120816114_EnumValuesChanges.Designer.cs">
       <DependentUpon>201407120816114_EnumValuesChanges.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201407192153564_AddingIsSynhronized.cs" />
+    <Compile Include="Migrations\201407192153564_AddingIsSynhronized.Designer.cs">
+      <DependentUpon>201407192153564_AddingIsSynhronized.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201407192156272_AddingWordState.cs" />
+    <Compile Include="Migrations\201407192156272_AddingWordState.Designer.cs">
+      <DependentUpon>201407192156272_AddingWordState.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Bll\UserBll.cs" />
@@ -97,6 +105,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201407120816114_EnumValuesChanges.resx">
       <DependentUpon>201407120816114_EnumValuesChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201407192153564_AddingIsSynhronized.resx">
+      <DependentUpon>201407192153564_AddingIsSynhronized.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201407192156272_AddingWordState.resx">
+      <DependentUpon>201407192156272_AddingWordState.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

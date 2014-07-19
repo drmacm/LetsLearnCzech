@@ -6,10 +6,17 @@ using System.Threading.Tasks;
 
 namespace LetsLearnCzech.DomainModel
 {
+    public enum WordState
+    { 
+        Unsynchronized = 1,
+        Synhronized = 2,
+    }
+
     public enum WordType
     {
-        Noun = 1,
-        Verb = 2
+        Unknown = 1,
+        Noun = 2,
+        Verb = 3
     }
 
     public enum Gender

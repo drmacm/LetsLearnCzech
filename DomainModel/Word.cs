@@ -32,6 +32,9 @@ namespace LetsLearnCzech.DomainModel
         public bool IsProcessed { get; set; }
 
         [DataMember]
+        public WordState WordState { get; set; }
+
+        [DataMember]
         public WordType WordType { get; set; }
 
         [DataMember]

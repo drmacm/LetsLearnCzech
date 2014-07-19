@@ -123,16 +123,16 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Service References\CzechService\CzechService.disco" />
-    <Content Include="Service References\CzechService\configuration91.svcinfo" />
-    <Content Include="Service References\CzechService\configuration.svcinfo" />
+    <None Include="Service References\CzechService\CzechService.disco" />
+    <None Include="Service References\CzechService\configuration91.svcinfo" />
+    <None Include="Service References\CzechService\configuration.svcinfo" />
     <Content Include="Service References\CzechService\LetsLearnCzech.Web.CzechService.Word.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Service References\CzechService\Reference.svcmap">
+    <None Include="Service References\CzechService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
-    </Content>
+    </None>
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -168,7 +168,7 @@
     <Content Include="Views\Word\CreateVerb.cshtml" />
     <Content Include="Views\Word\DetailsNoun.cshtml" />
     <Content Include="Views\Word\EditVerb.cshtml" />
-    <Content Include="Service References\CzechService\CzechService.wsdl" />
+    <None Include="Service References\CzechService\CzechService.wsdl" />
     <None Include="Service References\CzechService\CzechService.xsd">
       <SubType>Designer</SubType>
     </None>
