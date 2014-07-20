@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9e6395bd-e637-4542-897b-ab979647380e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a79339a7-f54f-4b80-bde6-1b2fefbd6007" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,14 +19,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:9067/CzechService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://langservice.local/CzechService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CzechService.disco" MetadataType="Disco" ID="39bc3377-dc82-4b2c-a4b7-5d3fad3601bd" SourceId="1" SourceUrl="http://localhost:9067/CzechService.svc?disco" />
-    <MetadataFile FileName="CzechService.xsd" MetadataType="Schema" ID="4a3fd4e7-5d5a-4249-926f-bf657cdecccf" SourceId="1" SourceUrl="http://localhost:9067/CzechService.svc?xsd=xsd2" />
-    <MetadataFile FileName="CzechService1.xsd" MetadataType="Schema" ID="d79b1e90-7a5d-4e00-8dc4-432fa2b1aa35" SourceId="1" SourceUrl="http://localhost:9067/CzechService.svc?xsd=xsd0" />
-    <MetadataFile FileName="CzechService2.xsd" MetadataType="Schema" ID="ddbb07b0-feb0-4905-bde8-410fbf060dfc" SourceId="1" SourceUrl="http://localhost:9067/CzechService.svc?xsd=xsd1" />
-    <MetadataFile FileName="CzechService.wsdl" MetadataType="Wsdl" ID="ad5f5cbd-3719-4b1a-b8dc-e1dbea647e70" SourceId="1" SourceUrl="http://localhost:9067/CzechService.svc?wsdl" />
+    <MetadataFile FileName="CzechService.xsd" MetadataType="Schema" ID="dcedfa92-cf05-4d71-8ef8-5cc109257bfc" SourceId="1" SourceUrl="http://langservice.local/CzechService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CzechService.disco" MetadataType="Disco" ID="a87c63bd-2d25-464b-aa24-3f1fb7d1911a" SourceId="1" SourceUrl="http://langservice.local/CzechService.svc?disco" />
+    <MetadataFile FileName="CzechService1.xsd" MetadataType="Schema" ID="53a0f45f-0aec-42d1-874d-360be1987513" SourceId="1" SourceUrl="http://langservice.local/CzechService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CzechService2.xsd" MetadataType="Schema" ID="f1a2350f-ebcc-47d8-af35-3a92454a894b" SourceId="1" SourceUrl="http://langservice.local/CzechService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CzechService.wsdl" MetadataType="Wsdl" ID="258695bc-3d72-4341-86a4-53d04d23b4c4" SourceId="1" SourceUrl="http://langservice.local/CzechService.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

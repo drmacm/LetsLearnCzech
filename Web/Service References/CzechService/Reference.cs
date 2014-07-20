@@ -62,6 +62,9 @@ namespace LetsLearnCzech.Web.CzechService {
         private System.Nullable<LetsLearnCzech.Web.CzechService.Tense> TenseField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private LetsLearnCzech.Web.CzechService.WordState WordStateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private LetsLearnCzech.Web.CzechService.WordType WordTypeField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -239,6 +242,19 @@ namespace LetsLearnCzech.Web.CzechService {
                 if ((this.TenseField.Equals(value) != true)) {
                     this.TenseField = value;
                     this.RaisePropertyChanged("Tense");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public LetsLearnCzech.Web.CzechService.WordState WordState {
+            get {
+                return this.WordStateField;
+            }
+            set {
+                if ((this.WordStateField.Equals(value) != true)) {
+                    this.WordStateField = value;
+                    this.RaisePropertyChanged("WordState");
                 }
             }
         }
@@ -457,14 +473,28 @@ namespace LetsLearnCzech.Web.CzechService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="WordState", Namespace="http://schemas.datacontract.org/2004/07/LetsLearnCzech.DomainModel")]
+    public enum WordState : int {
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Unsynchronized = 1,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Synhronized = 2,
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="WordType", Namespace="http://schemas.datacontract.org/2004/07/LetsLearnCzech.DomainModel")]
     public enum WordType : int {
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Noun = 1,
+        Unknown = 1,
         
         [System.Runtime.Serialization.EnumMemberAttribute()]
-        Verb = 2,
+        Noun = 2,
+        
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Verb = 3,
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
